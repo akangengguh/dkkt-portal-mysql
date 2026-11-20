@@ -1,0 +1,40 @@
+{
+  "name": "dkkt-portal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "db:check": "tsx scripts/check-db.ts",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:seed-news-categories": "tsx prisma/seed-news-categories.ts",
+    "db:seed-all": "npm run db:seed && npm run db:seed-news-categories"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1146.0",
+    "@types/archiver": "^8.0.0",
+    "archiver": "^8.0.0",
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.4.2",
+    "exceljs": "^4.4.0",
+    "jose": "^6.2.10",
+    "mariadb": "^3.5.4",
+    "next": "16.3.8",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "temporal-polyfill": "^1.0.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.8",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.13",
+    "typescript": "^5"
+  }
+}
